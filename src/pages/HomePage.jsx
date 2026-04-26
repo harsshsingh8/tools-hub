@@ -2,6 +2,7 @@ import { useState } from "react";
 import { tools, categories } from "../data/tools";
 import HeroSection from "../components/HeroSection";
 import ToolCard from "../components/ToolCard";
+import AdSense from "../components/AdSense";
 
 export default function HomePage() {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -64,6 +65,9 @@ export default function HomePage() {
             No tools found in this category.
           </div>
         )}
+
+        {/* Ad — Below Tool Grid */}
+        <AdSense slot="5555555555" format="auto" style={{ minHeight: "90px" }} />
       </section>
 
       {/* Stats / Trust Section */}

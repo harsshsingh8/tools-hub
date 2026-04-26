@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { getToolById } from "../data/tools";
 import SeoContent from "../components/SeoContent";
+import AdSense from "../components/AdSense";
 import NotFoundPage from "./NotFoundPage";
 
 const toolComponents = import.meta.glob("./tools/*.jsx", { eager: true });
@@ -48,20 +49,16 @@ export default function ToolPage() {
           <p className="mt-2 text-sm text-slate-400">{tool.description}</p>
         </div>
 
-        {/* Ad Placeholder — Below Title */}
-        <div className="mb-6 flex h-24 items-center justify-center rounded-xl border border-dashed border-slate-700 bg-slate-800/20 text-xs text-slate-600">
-          Ad Placeholder
-        </div>
+        {/* Ad — Below Title */}
+        <AdSense slot="1234567890" format="auto" style={{ minHeight: "90px" }} />
 
         {/* Tool Interface */}
         <div className="rounded-2xl glass-strong p-5 sm:p-7 glow-brand-hover transition-all duration-500">
           <ToolComponent />
         </div>
 
-        {/* Ad Placeholder — After Output */}
-        <div className="mt-6 flex h-24 items-center justify-center rounded-xl border border-dashed border-slate-700 bg-slate-800/20 text-xs text-slate-600">
-          Ad Placeholder
-        </div>
+        {/* Ad — After Output */}
+        <AdSense slot="0987654321" format="auto" style={{ minHeight: "90px" }} />
 
         {/* SEO Content */}
         <SeoContent toolId={toolId} />
