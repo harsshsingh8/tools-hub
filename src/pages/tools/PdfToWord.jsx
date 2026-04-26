@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { FileText, Download, RefreshCcw } from "lucide-react";
 import * as pdfjsLib from "pdfjs-dist";
+import pdfWorker from "pdfjs-dist/build/pdf.worker.mjs?url";
 import { Document, Packer, Paragraph } from "docx";
 import FileDropzone from "../../components/FileDropzone";
 import LoadingSpinner from "../../components/LoadingSpinner";
 
-pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.mjs`;
+pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorker;
 
 export default function PdfToWord() {
   const [file, setFile] = useState(null);
