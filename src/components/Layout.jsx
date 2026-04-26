@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { Wrench, Globe, MessageCircle, Mail } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
 import AnimatedBackground from "./AnimatedBackground";
+import AdSense from "./AdSense";
 
 export default function Layout({ children }) {
   const location = useLocation();
@@ -57,6 +58,11 @@ export default function Layout({ children }) {
 
       {/* Main Content */}
       <main className="relative z-10 flex-1 animate-fade-in">{children}</main>
+
+      {/* Ad — Above Footer (All Pages) */}
+      <div className="relative z-10 mx-auto max-w-7xl px-4 py-6 sm:px-6">
+        <AdSense slot="4444444444" format="auto" style={{ minHeight: "90px" }} />
+      </div>
 
       {/* Footer */}
       <footer className="relative z-10 border-t border-white/5 glass px-4 py-10 sm:px-6">

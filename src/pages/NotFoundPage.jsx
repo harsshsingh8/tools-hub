@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Home, AlertTriangle } from "lucide-react";
+import AdSense from "../components/AdSense";
 
 export default function NotFoundPage() {
   return (
@@ -20,6 +21,11 @@ export default function NotFoundPage() {
         <Home className="h-4 w-4" />
         Back to Home
       </Link>
+
+      {/* Ad — 404 Page */}
+      <div className="mt-10 w-full max-w-xl">
+        <AdSense slot="6666666666" format="auto" style={{ minHeight: "90px" }} />
+      </div>
     </div>
   );
 }

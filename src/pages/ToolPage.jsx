@@ -62,6 +62,9 @@ export default function ToolPage() {
 
         {/* SEO Content */}
         <SeoContent toolId={toolId} />
+
+        {/* Ad — Below SEO Content */}
+        <AdSense slot="7777777777" format="auto" style={{ minHeight: "90px" }} />
       </div>
     </>
   );

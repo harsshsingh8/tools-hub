@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { getToolById, getRelatedTools } from "../data/tools";
 import { ArrowRight, ChevronDown, HelpCircle, CheckCircle, Info, Wrench } from "lucide-react";
 import { useState } from "react";
+import AdSense from "./AdSense";
 
 export default function SeoContent({ toolId }) {
   const mainTool = toolId ? getToolById(toolId) : null;
@@ -47,6 +48,9 @@ export default function SeoContent({ toolId }) {
           ))}
         </ul>
       </section>
+
+      {/* Ad — Middle of Content */}
+      <AdSense slot="8888888888" format="auto" style={{ minHeight: "90px" }} />
 
       {/* Why Use */}
       <section>

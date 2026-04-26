@@ -16,6 +16,11 @@ export default function HomePage() {
     <div>
       <HeroSection />
 
+      {/* Ad — Below Hero */}
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 pt-8">
+        <AdSense slot="1111111111" format="auto" style={{ minHeight: "90px" }} />
+      </div>
+
       <section id="tools" className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20">
         <div className="mb-8 text-center animate-fade-in-up">
           <h2 className="font-display text-2xl font-bold text-white sm:text-3xl tracking-tight">
@@ -89,6 +94,11 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Ad — Below Stats */}
+      <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6">
+        <AdSense slot="2222222222" format="auto" style={{ minHeight: "90px" }} />
+      </div>
     </div>
   );
 }
