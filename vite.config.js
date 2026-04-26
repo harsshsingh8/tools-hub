@@ -11,10 +11,10 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       output: {
-        manualChunks: {
-          pdf: ['pdf-lib', 'pdfjs-dist'],
-          office: ['docx', 'mammoth'],
-          vendor: ['react', 'react-dom', 'react-router-dom', 'react-helmet-async'],
+        manualChunks(id) {
+          if (id.includes('pdf-lib') || id.includes('pdfjs-dist')) return 'pdf';
+          if (id.includes('docx') || id.includes('mammoth')) return 'office';
+          if (id.includes('react') || id.includes('react-router-dom') || id.includes('react-helmet-async')) return 'vendor';
         }
       }
     }
