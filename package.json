@@ -12,6 +12,7 @@
   "dependencies": {
     "@fontsource/inter": "^5.2.8",
     "@tailwindcss/vite": "^4.2.4",
+    "@vercel/analytics": "^2.0.1",
     "docx": "^9.6.1",
     "html2canvas": "^1.4.1",
     "jszip": "^3.10.1",
